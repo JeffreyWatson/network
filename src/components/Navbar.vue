@@ -1,11 +1,17 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <div class="d-flex flex-column align-items-center">
-        <img alt="logo" src="../assets/img/cw-logo.png" height="45" />
-      </div>
-    </router-link>
-    <button
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+    <div class="text-success fw-bold me-5"><u>Network</u></div>
+    <ul class="navbar-nav me-5">
+      <li>
+        <router-link
+          :to="{ name: 'Home' }"
+          class="btn text-success lighten-30 selectable text-uppercase"
+        >
+          Home
+        </router-link>
+      </li>
+    </ul>
+    <!-- <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
@@ -15,20 +21,13 @@
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon" />
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto">
-        <li>
-          <router-link
-            :to="{ name: 'About' }"
-            class="btn text-success lighten-30 selectable text-uppercase"
-          >
-            About
-          </router-link>
-        </li>
-      </ul>
-      <!-- LOGIN COMPONENT HERE -->
+    </button> -->
+    <div
+      class="collapse navbar-collapse d-flex justify-content-between"
+      id="navbarText"
+    >
       <Login />
+      <Search />
     </div>
   </nav>
 </template>
